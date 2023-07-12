@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std::string_literals;
 
@@ -10,10 +11,7 @@ int main()
 	std::cin >> number;
 	std::cout << "Enter Power : ";
 	std::cin >> power;
-	double ans{1};
-	for (int i{power}; i; i--)
-	{
-		ans = ans * static_cast<double>(number);
-	}
+	double ans{pow(number, power)};
 	std::cout << number << "^" << power << " -> " << ans << std::endl;
 }
+
